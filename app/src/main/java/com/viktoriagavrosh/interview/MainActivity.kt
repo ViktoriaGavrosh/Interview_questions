@@ -6,12 +6,11 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.viktoriagavrosh.interview.ui.InterviewApp
 import com.viktoriagavrosh.interview.ui.theme.InterviewTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        (application as InterviewApplication).appComponent.inject(this)
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {

@@ -4,16 +4,17 @@ plugins {
     alias(libs.plugins.kotlin.plugin.compose)
     alias(libs.plugins.devtools.ksp)
     alias(libs.plugins.kotlin.plugin.serialization)
+    alias(libs.plugins.dagger.hilt.android)
 }
 
 android {
     namespace = "com.viktoriagavrosh.interview"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.viktoriagavrosh.interview"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -42,9 +43,6 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -70,8 +68,9 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.dagger)
-    ksp(libs.dagger.compiler)
+    implementation(libs.dagger.hilt)
+    ksp(libs.dagger.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

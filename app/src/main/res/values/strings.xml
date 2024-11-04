@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Interview</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="back">back</string>
+    <string name="topbar_title">Темы</string>
+    <string name="game">game</string>
+    <string name="add">add</string>
+    <string name="edit">edit</string>
 </resources>

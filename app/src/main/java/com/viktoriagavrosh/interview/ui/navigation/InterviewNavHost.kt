@@ -33,7 +33,7 @@ fun InterviewNavHost(
                 onMenuItemClick = { id -> navController.navigate(QuestionMenu(topicId = id)) },
             )
         }
-        composable<QuestionMenu> {backStackEntry ->
+        composable<QuestionMenu> { backStackEntry ->
             val topicId = backStackEntry.toRoute<QuestionMenu>().topicId
             MenuScreen(
                 modifier = modifier,

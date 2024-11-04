@@ -1,9 +1,5 @@
 package com.viktoriagavrosh.interview.model
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
 /**
  * Model represents a single topic for ui
  *
